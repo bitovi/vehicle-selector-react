@@ -20,5 +20,5 @@ jobs:
       - id: build-publish
         uses: bitovi/github-actions-react-to-github-pages@v1.2.0
         with:
-          build_command: bun run build -- --base=/${{ github.event.repository.name }}
+          build_command: npm run build -- --base=/${{ github.event.repository.name }}
           path: dist
