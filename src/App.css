@@ -1,0 +1,24 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 2em;
+  padding: 0.5em;
+  will-change: filter;
+  transition: filter 150ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #dadadaaa);
+}
