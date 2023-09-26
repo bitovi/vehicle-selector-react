@@ -17,8 +17,10 @@ jobs:
     env:
       VITE_API_BASE_URL: ${{ secrets.VITE_API_BASE_URL }}
     steps:
+      - uses: oven-sh/setup-bun@v1
+      - run: bun install
       - id: build-publish
         uses: bitovi/github-actions-react-to-github-pages@v1.2.0
         with:
-          build_command: npm run build -- --base=/${{ github.event.repository.name }}
+          build_command: bun run build -- --base=/${{ github.event.repository.name }}
           path: dist
