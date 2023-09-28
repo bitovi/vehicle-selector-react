@@ -1,4 +1,4 @@
-import { useCowbird } from '@/cowbirdProvider'
+import { useCowbird } from '@/providers/CowbirdProvider'
 import { useEffect, useState } from 'react'
 
 type Model = string

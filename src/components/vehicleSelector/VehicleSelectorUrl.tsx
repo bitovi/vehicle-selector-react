@@ -1,30 +1,32 @@
-import { useState } from "react";
+import { useLocation } from "@/providers/locationProvider";
 import { Make } from "./components/Make";
 import { Model } from "./components/Model";
 import { Year } from "./components/Year";
 
-export function VehicleSelectorBetterUseState() {
-  const [year, setYear] = useState<string>("")
-  const [make, setMake] = useState<string>("")
-  const [model, setModel] = useState<string>("")
+export function VehicleSelectorUrl() {
+  const { searchParams, setSearchParams } = useLocation()
 
-  /*
-  Notice that these functions handle all related state changes at once, instead of relying on useEffect to handle them later. This can be a better pattern because it keeps the state changes together, and it also is marginally more efficient as it avoids unnecessary renders.
-  */
+  const year = searchParams.get("year") || ""
+  const make = searchParams.get("make") || ""
+  const model = searchParams.get("model") || ""
 
   const onChangeYear = (year: string) => {
-    setYear(year)
-    setMake("")
-    setModel("")
+    setSearchParams({
+      year,
+      make: "",
+      model: ""
+    })
   }
 
   const onChangeMake = (make: string) => {
-    setMake(make)
-    setModel("")
+    setSearchParams({
+      make,
+      model: ""
+    })
   }
 
   const onChangeModel = (model: string) => {
-    setModel(model)
+    setSearchParams({ model })
   }
 
   return (

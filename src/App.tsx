@@ -11,26 +11,31 @@ import vehicleSelectorCode from "@components/vehicleSelector/VehicleSelector?raw
 import vehicleSelectorWithEffectsCode from "@components/vehicleSelector/VehicleSelectorWithEffects?raw";
 import vehicleSelectorBetterUseStateCode from "@components/vehicleSelector/VehicleSelectorBetterUseState?raw";
 import vehicleSelectorUseReducerCode from "@components/vehicleSelector/VehicleSelectorUseReducer?raw";
+import vehicleSelectorUrlCode from "@components/vehicleSelector/VehicleSelectorUrl?raw";
 import { Highlighter } from 'rc-highlight';
+import { VehicleSelectorUrl } from './components/vehicleSelector/VehicleSelectorUrl';
 
 type Version =
   | "useState"
   | "useStateWithEffects"
   | "useStateBetter"
   | "useReducer"
+  | "urlParams"
 
 const VehicleSelectors: Record<Version, JSX.Element> = {
   useState: <VehicleSelector />,
   useStateWithEffects: <VehicleSelectorWithEffects />,
   useStateBetter: <VehicleSelectorBetterUseState />,
-  useReducer: <VehicleSelectorUseReducer />
+  useReducer: <VehicleSelectorUseReducer />,
+  urlParams: <VehicleSelectorUrl />
 }
 
 const VehicleSelectorCode: Record<Version, string> = {
   useState: vehicleSelectorCode,
   useStateWithEffects: vehicleSelectorWithEffectsCode,
   useStateBetter: vehicleSelectorBetterUseStateCode,
-  useReducer: vehicleSelectorUseReducerCode
+  useReducer: vehicleSelectorUseReducerCode,
+  urlParams: vehicleSelectorUrlCode
 }
 
 function App() {
@@ -71,6 +76,12 @@ function App() {
             onClick={() => setVersion("useReducer")}
           >
             useReducer
+          </button>
+          <button
+            disabled={version === "urlParams"}
+            onClick={() => setVersion("urlParams")}
+          >
+            URL Params
           </button>
         </div>
         {VehicleSelectors[version]}
