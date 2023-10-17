@@ -1,4 +1,9 @@
-export function toSelectOptions(items?: Array<string | number>) {
+type Option = {
+  label: string
+  value: string
+}
+
+export function toSelectOptions(items?: Array<string | number>): Option[] {
   if (!items) {
     return []
   }

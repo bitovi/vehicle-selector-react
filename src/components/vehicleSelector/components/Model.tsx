@@ -1,5 +1,5 @@
-import { useModels } from "@/hooks/useModels";
-import { toSelectOptions } from "@/utils/toSelectOptions";
+import { useModels } from "@hooks/useModels";
+import { toSelectOptions } from "@utils/toSelectOptions";
 import { Select } from "@components/Select";
 
 export function Model({

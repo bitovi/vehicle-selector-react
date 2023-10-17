@@ -1,5 +1,5 @@
-import { useMakes } from "@/hooks/useMakes";
-import { toSelectOptions } from "@/utils/toSelectOptions";
+import { useMakes } from "@hooks/useMakes";
+import { toSelectOptions } from "@utils/toSelectOptions";
 import { Select } from "@components/Select";
 
 export function Make({

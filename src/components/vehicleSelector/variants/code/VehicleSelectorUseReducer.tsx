@@ -1,7 +1,7 @@
 import { useReducer } from "react";
-import { Make } from "./components/Make";
-import { Model } from "./components/Model";
-import { Year } from "./components/Year";
+import { Make } from "../../components/make/Make";
+import { Model } from "../../components/Model";
+import { Year } from "../../components/Year";
 
 type State = {
   year: string

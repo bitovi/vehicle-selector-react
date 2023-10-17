@@ -1,6 +1,6 @@
 import { Select } from "@components/Select";
-import { useYears } from "@/hooks/useYears";
-import { toSelectOptions } from "@/utils/toSelectOptions";
+import { useYears } from "@hooks/useYears";
+import { toSelectOptions } from "@utils/toSelectOptions";
 
 export function Year({
   year,

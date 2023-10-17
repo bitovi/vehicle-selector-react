@@ -3,10 +3,13 @@
     /* For path aliases */
     "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
       "@assets/*": ["src/assets/*"],
-      "@components/*": ["src/components/*"]
+      "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@providers/*": ["src/providers/*"],
+      "@utils/*": ["src/utils/*"]
     },
+    "types": ["bun-types", "cypress"],
 
     /* Output */
     "target": "ES2020",

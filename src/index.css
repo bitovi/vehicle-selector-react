@@ -27,7 +27,7 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -37,7 +37,7 @@ h1 {
   line-height: 1.1;
 }
 
-button {
+.button {
   border-radius: none;
   border: 1px solid #555;
   padding: 0.6em 1.2em;
@@ -49,22 +49,23 @@ button {
   transition: border-color 0.25s;
 }
 
-button:first-child {
+.button:first-child {
   border-top-left-radius: 0.5rem;
   border-bottom-left-radius: 0.5rem;
 }
 
-button:last-child {
+.button:last-child {
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
 
-button:disabled {
+.button.active,
+.button.active:focus {
   color: #ffffff;
   background-color: #552022;
 }
 
-button:hover {
+.button:hover {
   border-color: #CB3036;
   background-color: #222222;
 }
@@ -121,6 +122,12 @@ button:focus-visible {
   gap: 1rem;
 }
 
+@media screen and (max-width: 768px) {
+  .vehicle-selectors {
+    flex-direction: column;
+  }
+}
+
 .messages {
   position: fixed;
   bottom: 1rem;
@@ -144,6 +151,7 @@ button:focus-visible {
 }
 
 .code {
+  width: 100%;
   display: flex;
   font-family: monospace;
   font-size: 1rem;

@@ -1,21 +1,12 @@
-import { useEffect, useState } from "react";
-import { Make } from "./components/Make";
-import { Model } from "./components/Model";
-import { Year } from "./components/Year";
+import { useState } from "react";
+import { Make } from "../../components/make/Make";
+import { Model } from "../../components/Model";
+import { Year } from "../../components/Year";
 
-export function VehicleSelectorWithEffects() {
+export function VehicleSelector() {
   const [year, setYear] = useState<string>("")
   const [make, setMake] = useState<string>("")
   const [model, setModel] = useState<string>("")
-
-  useEffect(() => {
-    setMake("")
-    setModel("")
-  }, [year])
-
-  useEffect(() => {
-    setModel("")
-  }, [make])
 
   return (
     <div>
@@ -30,4 +21,3 @@ export function VehicleSelectorWithEffects() {
     </div>
   )
 }
-

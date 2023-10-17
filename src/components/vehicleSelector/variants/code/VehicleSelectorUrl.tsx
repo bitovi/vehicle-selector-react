@@ -1,7 +1,7 @@
-import { useLocation } from "@/providers/locationProvider";
-import { Make } from "./components/Make";
-import { Model } from "./components/Model";
-import { Year } from "./components/Year";
+import { useLocation } from "@providers/locationProvider";
+import { Make } from "../../components/make/Make";
+import { Model } from "../../components/Model";
+import { Year } from "../../components/Year";
 
 export function VehicleSelectorUrl() {
   const { searchParams, setSearchParams } = useLocation()

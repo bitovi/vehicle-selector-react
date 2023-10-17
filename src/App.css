@@ -19,6 +19,32 @@
   will-change: filter;
   transition: filter 150ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #dadadaaa);
+}
+
+.main-nav {
+  margin: 1rem 0;
+
+  > a {
+    color: white;
+  }
+
+  > a:focus,
+  > a:hover,
+  > a:visited {
+    color: white;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-nav {
+    display: flex;
+    flex-direction: column;
+
+    > a.button {
+      border-radius: unset;
+    }
+  }
 }
