@@ -14,12 +14,14 @@ import { VehicleSelectorBetterUseState } from '@components/vehicleSelector/varia
 import { VehicleSelectorWithEffects } from '@components/vehicleSelector/variants/code/VehicleSelectorWithEffects.tsx'
 import { VehicleSelectorUseReducer } from '@components/vehicleSelector/variants/code/VehicleSelectorUseReducer.tsx'
 import { VehicleSelectorUrl } from '@components/vehicleSelector/variants/code/VehicleSelectorUrl.tsx'
+import { VehicleSelectorCustomStateHook } from '@components/vehicleSelector/variants/code/VehicleSelectorCustomStateHook.tsx'
 
 import vehicleSelectorCode from "@components/vehicleSelector/variants/code/VehicleSelector?raw";
 import vehicleSelectorWithEffectsCode from "@components/vehicleSelector/variants/code/VehicleSelectorWithEffects?raw";
 import vehicleSelectorBetterUseStateCode from "@components/vehicleSelector/variants/code/VehicleSelectorBetterUseState?raw";
 import vehicleSelectorUseReducerCode from "@components/vehicleSelector/variants/code/VehicleSelectorUseReducer?raw";
 import vehicleSelectorUrlCode from "@components/vehicleSelector/variants/code/VehicleSelectorUrl?raw";
+import vehicleSelectorCustomStateHookCode from '@components/vehicleSelector/variants/code/VehicleSelectorCustomStateHook.tsx?raw'
 
 import { VariantWrapper } from '@components/vehicleSelector/variants/VariantWrapper.tsx'
 
@@ -43,6 +45,15 @@ const router = createBrowserRouter([
           <VariantWrapper
             component={<VehicleSelectorBetterUseState />}
             rawCode={vehicleSelectorBetterUseStateCode}
+          />
+        ),
+      },
+      {
+        path: "/use-state-custom-hook",
+        element: (
+          <VariantWrapper
+            component={<VehicleSelectorCustomStateHook />}
+            rawCode={vehicleSelectorCustomStateHookCode}
           />
         ),
       },

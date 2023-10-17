@@ -8,9 +8,13 @@ export function VehicleSelectorBetterUseState() {
   const [make, setMake] = useState<string>("")
   const [model, setModel] = useState<string>("")
 
-  /*
-  Notice that these functions handle all related state changes at once, instead of relying on useEffect to handle them later. This keeps the state changes together, so it requires a different mental model compared to using useEffect. It also is marginally more efficient as it avoids unnecessary renders.
-  */
+  /**
+   * Notice that these functions handle all related state changes at once,
+   * instead of relying on useEffect to handle them later. This keeps the 
+   * state changes together, so it requires a different mental model compared 
+   * to using useEffect. It also is marginally more efficient as it avoids 
+   * unnecessary renders.
+   */
 
   const onChangeYear = (year: string) => {
     setYear(year)

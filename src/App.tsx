@@ -36,6 +36,12 @@ function App() {
           </NavLink>
           <NavLink
             className={({ isActive }) => `button ${isActive ? 'active' : ''}`}
+            to="/use-state-custom-hook"
+          >
+            useState Custom Hook
+          </NavLink>
+          <NavLink
+            className={({ isActive }) => `button ${isActive ? 'active' : ''}`}
             to="/use-reducer"
           >
             useReducer
