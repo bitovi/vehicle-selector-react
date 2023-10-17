@@ -73,9 +73,11 @@ const router = createBrowserRouter([
           />
         ),
       },
-    ]
+    ],
   },
-]);
+], {
+  basename: "/vehicle-selector-react"
+});
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
