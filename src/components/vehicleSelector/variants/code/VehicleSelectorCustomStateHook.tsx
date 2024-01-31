@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Make } from "../../components/make/Make";
+import { Make } from "../../components/Make";
 import { Model } from "../../components/Model";
 import { Year } from "../../components/Year";
 
