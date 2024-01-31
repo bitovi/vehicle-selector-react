@@ -7,6 +7,7 @@ import { LocationProvider } from './providers/locationProvider'
 
 import {
   createBrowserRouter,
+  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import { VehicleSelector } from '@components/vehicleSelector/variants/code/VehicleSelector.tsx'
@@ -84,10 +85,14 @@ const router = createBrowserRouter([
           />
         ),
       },
+      {
+        path: "/",
+        element: <Navigate to="/use-state-simple" replace />
+      },
     ],
   },
 ], {
-  basename: "/vehicle-selector-react"
+  basename: window.location.hostname.includes('localhost') ? "" : "/vehicle-selector-react"
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
