@@ -1,6 +1,7 @@
 import './App.css';
 import bitoviLogo from "@assets/bitovi-logo.svg";
 import { NavLink, Outlet } from 'react-router-dom';
+import "@fontsource/inter"; // Defaults to weight 400
 
 function App() {
 
