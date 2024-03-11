@@ -87,7 +87,7 @@ const router = createHashRouter([
       },
       {
         path: "/",
-        element: <Navigate to="#/use-state-simple" replace />
+        element: <Navigate to="use-state-simple" replace />
       },
     ],
   },
