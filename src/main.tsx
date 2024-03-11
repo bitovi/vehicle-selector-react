@@ -28,7 +28,7 @@ import { VariantWrapper } from '@components/vehicleSelector/variants/VariantWrap
 
 const router = createHashRouter([
   {
-    path: "/",
+    path: "",
     element: <App />,
     children: [
       {
@@ -87,13 +87,11 @@ const router = createHashRouter([
       },
       {
         path: "/",
-        element: <Navigate to="/use-state-simple" replace />
+        element: <Navigate to="#/use-state-simple" replace />
       },
     ],
   },
-], {
-  basename: import.meta.env.BASE_URL
-});
+], {});
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
