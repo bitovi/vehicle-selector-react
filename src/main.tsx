@@ -6,9 +6,9 @@ import { CowbirdProvider } from './providers/CowbirdProvider'
 import { LocationProvider } from './providers/locationProvider'
 
 import {
-  createBrowserRouter,
   Navigate,
   RouterProvider,
+  createHashRouter,
 } from "react-router-dom";
 import { VehicleSelector } from '@components/vehicleSelector/variants/code/VehicleSelector.tsx'
 import { VehicleSelectorBetterUseState } from '@components/vehicleSelector/variants/code/VehicleSelectorBetterUseState.tsx'
@@ -26,13 +26,13 @@ import vehicleSelectorCustomStateHookCode from '@components/vehicleSelector/vari
 
 import { VariantWrapper } from '@components/vehicleSelector/variants/VariantWrapper.tsx'
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
     children: [
       {
-        path: "/use-state-simple",
+        path: "use-state-simple",
         element: (
           <VariantWrapper
             component={<VehicleSelector />}
@@ -41,7 +41,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/use-state-better",
+        path: "use-state-better",
         element: (
           <VariantWrapper
             component={<VehicleSelectorBetterUseState />}
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/use-state-custom-hook",
+        path: "use-state-custom-hook",
         element: (
           <VariantWrapper
             component={<VehicleSelectorCustomStateHook />}
@@ -59,7 +59,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/use-state-use-effect",
+        path: "use-state-use-effect",
         element: (
           <VariantWrapper
             component={<VehicleSelectorWithEffects />}
@@ -68,7 +68,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/use-reducer",
+        path: "use-reducer",
         element: (
           <VariantWrapper
             component={<VehicleSelectorUseReducer />}
@@ -77,7 +77,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/url-query-params",
+        path: "url-query-params",
         element: (
           <VariantWrapper
             component={<VehicleSelectorUrl />}
@@ -92,7 +92,7 @@ const router = createBrowserRouter([
     ],
   },
 ], {
-  basename: window.location.hostname.includes('localhost') ? "" : "/vehicle-selector-react"
+  basename: import.meta.env.BASE_URL
 });
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
